@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>jQuery seo URL plugin</title>
+	<title>jQuery SEO URL plugin</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Really simple plugin to create SEO friendly URLs via JavaScript">
 	<meta name="author" content="Slawomir Jasinski">
@@ -18,6 +18,29 @@
 
 	<!-- Le fav and touch icons -->
 	<link rel="shortcut icon" href="/favicon.ico">
+	<style>
+	body {
+		margin-top: 60px;
+	}
+	</style>
+	<script>
+	$(document).ready(function(){
+
+		$('#input1').on('keyup', function() {
+			$(this).css('border', '1px solid red');
+			$('#output1').val($(this).val().seoURL({'transliterate': false, 'lowercase': true}));
+		})
+
+		$('#input2').on('keyup', function() {
+			$(this).css('border', '1px solid green');
+			
+			$('#output2').val($(this).val().seoURL());
+		})
+
+		$('#output1').val($('#input1').val().seoURL({'transliterate': false, 'lowercase': true}));
+		$('#output2').val($('#input2').val().seoURL());
+	});
+	</script>
 </head>
 
 <body>
@@ -75,13 +98,13 @@ var result = text.seoURL(options);
 			
 			<form>
 				<input type="text" name="input1" value="My page long page title !!! With Caps it's" class="input-xlarge" id="input1">
-				<input type="text" name="result" class="input-xlarge" id="output1">
+				<input type="text" name="result" class="input-xlarge" readonly id="output1">
 			</form>
 
 			<p>See it inaction (transliterate): Currently supported languages: German, French and Polish</p>
 			<form>
 				<input type="text" name="input2" value="Frühwarnung" class="input-xlarge" id="input2">
-				<input type="text" name="result2" class="input-xlarge" id="output2">
+				<input type="text" name="result2" class="input-xlarge" readonly id="output2">
 			</form>
 		</div>
 		<div class="span3">
@@ -107,8 +130,6 @@ var result = text.seoURL(options);
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-<script src="jquery.seourl.js"></script>
-<script src="main.js"></script>
-
+<script src="http://commondatastorage.googleapis.com/demo.spidersoft.com.au/jquery.seourl.min.js"></script>
 </body>
 </html>
