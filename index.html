@@ -23,24 +23,7 @@
 		margin-top: 60px;
 	}
 	</style>
-	<script>
-	$(document).ready(function(){
-
-		$('#input1').on('keyup', function() {
-			$(this).css('border', '1px solid red');
-			$('#output1').val($(this).val().seoURL({'transliterate': false, 'lowercase': true}));
-		})
-
-		$('#input2').on('keyup', function() {
-			$(this).css('border', '1px solid green');
-			
-			$('#output2').val($(this).val().seoURL());
-		})
-
-		$('#output1').val($('#input1').val().seoURL({'transliterate': false, 'lowercase': true}));
-		$('#output2').val($('#input2').val().seoURL());
-	});
-	</script>
+	
 </head>
 
 <body>
@@ -131,5 +114,23 @@ var result = text.seoURL(options);
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
 <script src="http://commondatastorage.googleapis.com/demo.spidersoft.com.au/jquery.seourl.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+		$('#input1').on('keyup', function() {
+			$(this).css('border', '1px solid red');
+			$('#output1').val($(this).val().seoURL({'transliterate': false, 'lowercase': true}));
+		})
+
+		$('#input2').on('keyup', function() {
+			$(this).css('border', '1px solid green');
+			
+			$('#output2').val($(this).val().seoURL());
+		})
+
+		$('#output1').val($('#input1').val().seoURL({'transliterate': false, 'lowercase': true}));
+		$('#output2').val($('#input2').val().seoURL());
+	});
+	</script>
 </body>
 </html>
