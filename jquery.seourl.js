@@ -18,11 +18,11 @@
 	
 		// Create some defaults, extending them with any options that were provided
     	var settings = $.extend( {
-      		'transliterate': true,
+    		'transliterate': true,
       		'lowercase': false,
       		'uppercase': false,
       		'divider': '-',
-      		'append': '',
+      		'append': ''
     		}, options);
 
 
