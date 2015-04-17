@@ -13,7 +13,7 @@
 
 (function( $ ){
 
-	// protorype, and return string
+	// prototype, and return string
 	String.prototype.seoURL = function (options) {
 	
 		// Create some defaults, extending them with any options that were provided
