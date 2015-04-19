@@ -1,5 +1,5 @@
 /*
- * jQuery SeoURL plugin 0.1
+ * jQuery SeoURL plugin 0.11
  *
  * http://www.spidersoft.com.au/projects/jquery-seo-url-plugin/
  *
