@@ -60,10 +60,12 @@
 	}
 
 	var from = 'ąĄęĘóÓśŚłŁżŻźŹćĆńŃ' + // polish
-			   'ŠŒŽšœžŸ¥µÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ'; // common
+		'čďňřšť' + // czech
+		'ŠŒŽšœžŸ¥µÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ'; // common
 	
 	var to   = 'aAeEoOsSlLzZzZcCnN' +
-			   'SOZsozYYuAAAAAAACEEEEIIIIDNOOOOOUUUUYsaaaaaaaceeeeiiiionoooooouuuuyy';
+		'cdnrst' +
+		'SOZsozYYuAAAAAAACEEEEIIIIDNOOOOOUUUUYsaaaaaaaceeeeiiiionoooooouuuuyy';
 
 	var special = {'ä': 'ae', 'Ä': 'AE', 'ö': 'oe', 'Ö': 'OE', 'ü' : 'ue', 'Ü': 'UE', 'ß':'ss', 'ẞ': 'SS'}
 
