@@ -61,10 +61,12 @@
 
 	var from = 'ąĄęĘóÓśŚłŁżŻźŹćĆńŃ' + // polish
 		'čďňřšť' + // czech
+		'űő' + // Hungarian
 		'ŠŒŽšœžŸ¥µÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ'; // common
 	
 	var to   = 'aAeEoOsSlLzZzZcCnN' +
 		'cdnrst' +
+		'uo' +
 		'SOZsozYYuAAAAAAACEEEEIIIIDNOOOOOUUUUYsaaaaaaaceeeeiiiionoooooouuuuyy';
 
 	var special = {'ä': 'ae', 'Ä': 'AE', 'ö': 'oe', 'Ö': 'OE', 'ü' : 'ue', 'Ü': 'UE', 'ß':'ss', 'ẞ': 'SS'}
