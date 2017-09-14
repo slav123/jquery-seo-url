@@ -60,12 +60,12 @@
 	}
 
 	var from = 'ąĄęĘóÓśŚłŁżŻźŹćĆńŃ' + // polish
-		'čďňřšťěů' + // czech
+		'čČďĎňŇřŘšŠťŤěĚůŮ' + // czech
 		'űő' + // Hungarian
 		'ŠŒŽšœžŸ¥µÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ'; // common
 	
 	var to   = 'aAeEoOsSlLzZzZcCnN' +
-		'cdnrsteu' +
+		'ccddnnrrsstteeuu' +
 		'uo' +
 		'SOZsozYYuAAAAAAACEEEEIIIIDNOOOOOUUUUYsaaaaaaaceeeeiiiionoooooouuuuyy';
 
