@@ -1,136 +1,129 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>jQuery SEO URL plugin</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Really simple plugin to create SEO friendly URLs via JavaScript">
-	<meta name="author" content="Slawomir Jasinski">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery SEO URL plugin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Really simple plugin to create SEO friendly URLs via JavaScript">
+        <meta name="author" content="Slawomir Jasinski">
 
-	<!-- Le styles -->
-	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+        <!-- Le styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="/favicon.ico">
 
-	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    </head>
 
-	<!-- Le fav and touch icons -->
-	<link rel="shortcut icon" href="/favicon.ico">
-	<style>
-	body {
-		margin-top: 60px;
-	}
-	</style>
-	
-</head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="http://demo.spidersoft.com.au/index.html#">jQuery seoURL plugin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<a class="brand" href="#">jQuery seoURL plugin</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-			<div class="nav-collapse">
-				<ul class="nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</div>
-</div>
+        <div class="container py-3">
+            <div class="row">
+                <div class="col">
+                    <div class="jumbotron">
+                        <h1>jQuery SEO URL</h1>
+                        <p>Create SEO friendly URLs (or just slugs) in JavaScript</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p><strong>jQuery SEO URL</strong> is a simple plugin which can be used to generate seo friendly urls or slugs based on the content of a string.</p>
+                    <h2>Usage:</h2>
+                    <pre>
+                        var options = {
+                          'translitarate': true,
+                          'uppercase': false,
+                          "lowercase": false,
+                          "divider": '-'
+                        }
 
-<div class="container">
-	<div class="row">
-		<div class="span12">
-			<div class="hero-unit">
-				<h1>jQuery SEO URL</h1>
-				<p>Create SEO friendly URLs (or just slugs) in JavaScript</p>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="span4">
-			<p><strong>jQuery SEO URL</strong> is a simple plugin which can be used to generate seo friendly urls or slugs based on the content of a string.</p>
-			<h2>Usage:</h2>
-<pre>
-var options = { 
-  'translitarate': true, 
-  'uppercase': false, 
-  "lowercase": false, 
-  "divider": '-' 
-}
+                        var text = $('#field').val();
+                        var result = text.seoURL(options);
+                    </pre>
 
-var text = $('#field').val();
-var result = text.seoURL(options);
-</pre>
+                </div>
 
-		</div>
-		
-		<div class="span4 offset1">
-			<h2>Some Examples</h2>
-			<p>Simple URL cleanup, with to lowercase</p>
-			
-			<form>
-				<input type="text" name="input1" value="My page long page title !!! With Caps it's" class="input-xlarge" id="input1">
-				<input type="text" name="result" class="input-xlarge" readonly id="output1">
-			</form>
+                <div class="col offset1">
+                    <h2>Some Examples</h2>
+                    <p>Simple URL cleanup, with to lowercase</p>
 
-			<p>See it inaction (transliterate): Currently supported languages: German, French and Polish</p>
-			<form>
-				<input type="text" name="input2" value="Frühwarnung" class="input-xlarge" id="input2">
-				<input type="text" name="result2" class="input-xlarge" readonly id="output2">
-			</form>
-		</div>
-		<div class="span3">
-			<a href="https://github.com/slav123/jquery-seo-url" class="btn btn-primary">Download from GITHUB</a>
-		</div>
-	</div>
+                    <form>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="input1" value="My page long page title !!! With Caps it's" id="input1">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control text-muted" type="text" name="result" readonly id="output1">
+                        </div>
+                    </form>
 
-	<a name="contact"></a>
-	<hr>
-	<div class="row">
-		<div class="span6">
-			<p>&copy; 2013 <a href="http://www.spidersoft.com.au" target="_blank">SpiderSoft</a></p>
-		</div>
-		<div class="span6">	
-			
-		</div>
-	</div>
-</div>
-<!-- /container -->
+                    <p>See it inaction (transliterate): Currently supported languages: German, French and Polish</p>
+                    <form>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="input2" value="Frühwarnung" id="input2">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control text-muted" type="text" name="result2" class="input-xlarge" readonly id="output2">
+                        </div>
+                    </form>
+                </div>
+                <div class="col">
+                    <a href="https://github.com/slav123/jquery-seo-url" class="btn btn-primary">Download from GITHUB</a>
+                </div>
+            </div>
 
-<!-- Le javascript
-	================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-<script src="http://commondatastorage.googleapis.com/demo.spidersoft.com.au/jquery.seourl.min.js"></script>
-<script>
-	$(document).ready(function(){
+            <a name="contact"></a>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <p>&copy; 2013-2017 <a href="http://www.spidersoft.com.au" target="_blank">SpiderSoft</a></p>
+                </div>
+                <div class="col">
 
-		$('#input1').on('keyup', function() {
-			$(this).css('border', '1px solid red');
-			$('#output1').val($(this).val().seoURL({'transliterate': false, 'lowercase': true}));
-		})
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
 
-		$('#input2').on('keyup', function() {
-			$(this).css('border', '1px solid green');
-			
-			$('#output2').val($(this).val().seoURL());
-		})
+        <!-- Le javascript ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script src="http://commondatastorage.googleapis.com/demo.spidersoft.com.au/jquery.seourl.min.js"></script>
+        <script>
+            $(document).ready(function(){
 
-		$('#output1').val($('#input1').val().seoURL({'transliterate': false, 'lowercase': true}));
-		$('#output2').val($('#input2').val().seoURL());
-	});
-	</script>
-</body>
+                $('#input1').on('keyup', function() {
+                    $(this).css('border', '1px solid red');
+                    $('#output1').val($(this).val().seoURL({'transliterate': false, 'lowercase': true}));
+                })
+
+                $('#input2').on('keyup', function() {
+                    $(this).css('border', '1px solid green');
+
+                    $('#output2').val($(this).val().seoURL());
+                })
+
+                $('#output1').val($('#input1').val().seoURL({'transliterate': false, 'lowercase': true}));
+                $('#output2').val($('#input2').val().seoURL());
+            });
+        </script>
+    </body>
 </html>
